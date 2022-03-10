@@ -1,0 +1,23 @@
+Terminology About General Programing 
+
+{   // begining of a compound statement
+
+    int x;    // A declaration statement
+    int y;    // Just y identifier
+    int z;    // Just int z variable
+    x = 2;    // x = 2 is an expression, thus x = 2; with the trailing           
+		  semicolon is an expression statement
+    
+    int a = 0;  // initialization of a to 0
+    a = 1;      // assignment of a to 1
+
+    y = 2 * x + 5;	
+    if(y == 9) {    // A control statement
+        z = 52;
+    } else {        // A branching statement of a control statement
+        z = 0;
+    }
+
+ }    // end of a compound statement
+
+
