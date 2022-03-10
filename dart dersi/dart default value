@@ -1,0 +1,4 @@
+// Dart’ta değişkene bir değer atanmamışsa varsayılan olarak değeri null olur.
+
+int lineCount;
+assert(lineCount == null);
