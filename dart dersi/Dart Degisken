@@ -1,0 +1,3 @@
+var name = 'Abdullah';
+dynamic name = 'Abdullah';
+String name = 'Abdullah';
