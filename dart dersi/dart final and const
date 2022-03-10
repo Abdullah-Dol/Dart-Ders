@@ -1,0 +1,33 @@
+// Dart’ta immutable(değişmezler) değişkenler iki şekilde tanımlanır. Final ve const keywordleri değişkenin başına yazılır. 
+Ayrıca immutable demek eğer bir değişkene bir değer atanmışsa daha sonra aynı değişkene farklı bir değer atanamaz demektir. 
+Const compile-time için final run-time için kullanılır. Aradaki fark compiler derleme işlemine başlamadan önce const’a değer atanmalıdır. 
+Final’a ise run-time da atama işlemi yapılabilir.
+
+
+final name = 'Abdullah'; // Without a type annotation
+final String nickname = 'Dol';
+
+name = 'Ali'; // Error: a final variable can only be set once.
+
+
+// Const genelde sabitler için kullanılır.
+
+const bar = 1000000; // Unit of pressure (dynes/cm2)
+const double atm = 1.01325 * bar; // Standard atmosphere
+
+//Eğer bir diziyi const olarak tanımlamak isterseniz aşağıdaki gibi olmalıdır.
+
+var foo = const [];
+final bar = const [];
+const baz = []; // Equivalent to `const []`
+foo = [1, 2, 3]; // Was const []
+baz = [42]; // Error: Constant variables can't be assigned a value.
+
+// Ayrıca Dart type-casting (tip dönüşümü) ve koşullu atama işlemlerine const’ta izin verir.
+
+// Valid compile-time constants as of Dart 2.5.
+const Object i = 3; // Where i is a const Object with an int value...
+const list = [i as int]; // Use a typecast.
+const map = {if (i is int) i: "int"}; // Use is and collection if.
+const set = {if (list is List<int>) ...list}; // ...and a spread.
+
